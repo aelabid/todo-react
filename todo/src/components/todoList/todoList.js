@@ -11,6 +11,7 @@ const TodoList = ({ todos, onTodoUpdate, onTodoDelete }) => {
 
   const generateRows = () => {
     let items = [];
+    console.log(`hey ======== ${process.env}`);
     for (let i = startIndex; i < endIndex; i++) {
       items.push(
         <TodoItem

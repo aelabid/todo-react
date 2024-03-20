@@ -3,6 +3,7 @@ import TodoList from "./components/todoList/todoList";
 import AddTodo from "./components/addTodo/addTodo";
 
 const App = () => {
+
   const range = (start, stop, step) =>
     Array.from(
       { length: (stop - start) / step + 1 },
