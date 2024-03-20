@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const TodoItem = ({ todo, index, onTodoUpdate, onTodoDelete }) => {
+const TodoItem = ({ todo, index, onTodoUpdate, onTodoDelete, top }) => {
   const [editing, setEditing] = useState(false);
   const [editText, setEditText] = useState(todo);
   const [clickCount, setClickCount] = useState(null);
@@ -33,7 +33,10 @@ const TodoItem = ({ todo, index, onTodoUpdate, onTodoDelete }) => {
   };
 
   return (
-    <li className="flex items-center space-x-4">
+    <li
+      className={`flex items-center space-x-4 absolute`}
+      style={{ top: top + "px", height: "40px" }}
+    >
       <input
         type="checkbox"
         checked={isDone}
